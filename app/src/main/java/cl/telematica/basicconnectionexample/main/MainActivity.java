@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
             @Override
             public void onFailure(Call<List<Libro>> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(MainActivity.this, "AYURAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "doesnt work", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @Override
     public void populateRecyclerView(List<Libro> libros) {
-        mAdapter = new UIAdapter(libros);
+        mAdapter = new UIAdapter(libros, this);
         mRecyclerView.setAdapter(mAdapter);
     }
 }

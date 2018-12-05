@@ -14,6 +14,15 @@ public class Libro {
     private String editorial;
     private String genero;
     private int autor;
+    private String photo;
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
 
     public void setId(int id){
         this.id = id;
